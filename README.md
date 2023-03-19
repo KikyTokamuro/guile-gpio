@@ -9,9 +9,9 @@ gcc ./libgpio/gpio.c -fPIC -shared -o libgpio.so
 ### Install
 Copy `libgpio.so` to your shared libraries path, and `gpio.scm` to you guile `(%site-dir)` path
 
-### Run example
+### Run example (without install)
 ```sh
-LTDL_LIBRARY_PATH=. guile3.0 ./examples/blink.scm
+LTDL_LIBRARY_PATH=. guile-3.0 --no-auto-compile examples/blink.scm 
 ```
 
 ### Constants
@@ -109,6 +109,4 @@ Cleanup GPIO"
 ```
 
 ### Tested on
-```
-GNU Guile 3.0.5
-```
+**GNU Guile 3.0.5** and **Raspberry Pi 2 Model B**
